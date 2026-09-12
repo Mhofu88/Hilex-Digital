@@ -10,3 +10,9 @@
 .intro p {
   color: #405b53;
 }
+/* Keep text readable on dark HILEX panels */
+.cta-panel p,
+.cta-panel li,
+.cta-panel .small {
+  color: #f1f5f3;
+}
