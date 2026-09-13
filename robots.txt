@@ -1,0 +1,5 @@
+# HILEX Digital
+User-agent: *
+Allow: /
+
+Sitemap: https://hilexdigital.co.zw/sitemap.xml
