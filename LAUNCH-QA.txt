@@ -1,0 +1,5 @@
+HILEX LAUNCH CANDIDATE QA
+HTML pages: 49
+Malformed duplicate href occurrences: 0
+Missing content/news meta descriptions: 0
+Navigation standard failures (Education/Business/Pi/Regulation): 0
