@@ -1,1 +1,0 @@
-window.HILEX_LANG={"nav.learn":"Aprender","nav.business":"Negócios","nav.pi":"Ecossistema Pi","nav.regulation":"Regulação","nav.africa":"África","nav.news":"Notícias"};
