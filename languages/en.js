@@ -1,0 +1,1 @@
+window.HILEX_TRANSLATIONS={en:{}};
