@@ -1,0 +1,1 @@
+window.HILEX_LANG={"nav.learn":"Funda","nav.business":"Ibhizinisi","nav.pi":"I-Pi Ecosystem","nav.regulation":"Imithetho","nav.africa":"Afrika","nav.news":"Izindaba"};
