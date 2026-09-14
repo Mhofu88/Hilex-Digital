@@ -1,5 +1,1 @@
-(() => {
-  const supported = ["en","fr","pt","sw","sn","zu","bem","ny"];
-  const saved = localStorage.getItem("hilex-language");
-  if (supported.includes(saved)) document.documentElement.dataset.hilexLanguage = saved;
-})();
+(()=>{const supported=["en","fr","pt","sw","sn","zu","bem","ny","nd","tn","st","ss","ts","ve"];const code=localStorage.getItem("hilex-language")||"en";document.documentElement.lang=supported.includes(code)?code:"en";})();
