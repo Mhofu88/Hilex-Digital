@@ -76,7 +76,7 @@ function scoreQuiz(){
     });
 
     const services=[...new Set(gaps.map(i=>gapMap[i].service))].join(',');
-    html+='<div class="notice"><strong>Ready to implement these improvements?</strong><p>After understanding your needs through HILEX, you can use your preferred developer or explore BizApp ZW for commercial implementation support such as domain management, business email, websites, digital catalogues, apps and custom digital systems.</p><p><a class="btn primary" target="_blank" rel="noopener" href="https://bizappzw.co.zw/?source=hilex&needs='+encodeURIComponent(services)+'">Explore BizApp ZW Implementation Support ↗</a></p><small>HILEX education remains useful whether or not you choose BizApp ZW.</small></div>';
+    html+='<div class="notice"><strong>Ready to implement these improvements?</strong><p>After understanding your needs through HILEX, you can use your preferred developer or explore BizApp ZW for commercial implementation support such as domain management, business email, websites, digital catalogues, apps and custom digital systems.</p><p><a class="btn primary" target="_blank" rel="noopener"href="https://bizappzw.co.zw/hilex/?source=hilex&needs='+encodeURIComponent(services)+'">Explore BizApp ZW Implementation Support ↗</a></p><small>HILEX education remains useful whether or not you choose BizApp ZW.</small></div>';
   } else {
     html+='<div class="notice"><strong>No major gaps marked.</strong><p>You answered Yes to all ten areas. Continue reviewing security, customer experience, resilience and changing regulatory requirements as your business grows.</p></div>';
   }
