@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="HILEX lesson: Psychology of Money — how digital assets can influence trust, ownership, control, utility and value.">
+<meta name="theme-color" content="#0b3d2e">
+<title>Psychology of Money | HILEX Education</title>
+<style>
+
+:root{
+  --green:#0b3d2e;
+  --green2:#0f5a43;
+  --gold:#dda928;
+  --cream:#f7f3e8;
+  --ink:#17211d;
+  --muted:#405b53;
+  --card:#ffffff;
+  --line:#d8dfdb;
+  --warn:#fff5d9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:var(--green);color:#fff;display:flex;align-items:center;gap:18px;padding:14px 5%;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800}
+.brand-mark{width:42px;height:42px;border:3px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold)}
+.topbar nav{margin-left:auto;display:flex;gap:16px;align-items:center}
+.topbar nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+.hero{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;padding:64px 6% 56px}
+.eyebrow,.kicker{color:var(--gold);font-weight:900;letter-spacing:.11em;text-transform:uppercase;font-size:.82rem}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.03;margin:.4rem 0 1rem;max-width:900px}
+.hero p{font-size:1.1rem;max-width:780px;color:#edf5f1}
+.container{width:min(1100px,90%);margin:auto}
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:-28px auto 42px}
+.path a,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,.06)}
+.path b{display:block;color:var(--green);font-size:1.02rem;margin-top:7px}
+.path span{font-size:.92rem;color:var(--muted)}
+.section{padding:44px 0}
+.section h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:.2rem 0 1rem}
+.lesson-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card h3{margin:.5rem 0}
+.card p{color:var(--muted)}
+.btn{display:inline-block;background:var(--gold);color:#171717;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:12px;margin-top:8px}
+.btn.secondary{background:transparent;border:2px solid var(--green);color:var(--green)}
+.lesson{width:min(850px,90%);margin:38px auto 70px}
+.breadcrumbs{font-size:.92rem;color:var(--muted);margin-bottom:22px}
+.lesson h1{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.07;margin:.3rem 0 1rem}
+.lesson h2{margin-top:2.2rem;color:var(--green)}
+.lesson h3{margin-top:1.6rem}
+.lead{font-size:1.16rem;color:#36413c}
+.callout{border-left:5px solid var(--gold);background:#fff;padding:18px 20px;margin:24px 0;border-radius:10px}
+.security{background:var(--warn);border:1px solid #ecd89a;padding:20px;border-radius:14px;margin:24px 0}
+.keyterms{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.keyterms div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.example{background:#eaf4ef;border-radius:14px;padding:20px;margin:20px 0}
+.quiz{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin:28px 0}
+.quiz details{border-top:1px solid var(--line);padding:14px 0}
+.quiz details:first-of-type{border-top:0}
+.lesson-nav{display:flex;justify-content:space-between;gap:12px;margin-top:36px}
+.lesson-nav a{flex:1;text-decoration:none;border:2px solid var(--green);border-radius:12px;padding:14px;font-weight:800}
+.lesson-nav a:last-child{text-align:right;background:var(--green);color:#fff}
+footer{background:#082e23;color:#dce9e3;padding:30px 5%;text-align:center}
+.small{font-size:.9rem;color:var(--muted)}
+.progress{height:8px;background:#dfe6e2;border-radius:99px;overflow:hidden;margin:16px 0 30px}
+.progress span{display:block;height:100%;background:var(--gold)}
+@media(max-width:760px){
+  .topbar nav{display:none}
+  .path{grid-template-columns:1fr}
+  .lesson-grid{grid-template-columns:1fr}
+  .keyterms{grid-template-columns:1fr}
+  .lesson-nav{flex-direction:column}
+  .lesson-nav a:last-child{text-align:left}
+}
+
+</style>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+<meta name="hilex-education-build" content="edu-psychology-v1">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="/"><span class="brand-mark">H</span><span>HILEX</span></a>
+<nav><a href="../../index.html">← HILEX Home</a><a href="index.html">Education Hub</a></nav>
+<select id="eduLanguage" class="edu-language" aria-label="Language"><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="sw">Kiswahili</option><option value="sn">Shona</option><option value="zu">isiZulu</option><option value="bem">Bemba</option><option value="ny">Chichewa</option><option value="nd">Ndebele</option><option value="tn">Setswana</option><option value="st">Sesotho</option><option value="ss">siSwati</option><option value="ts">itsonga</option><option value="ve">Tshivenda</option></select>
+</header>
+
+<main class="lesson" id="eduContent" data-edu-page="psychology-of-money">
+<div class="breadcrumbs"><a href="/">HILEX</a> › <a href="index.html">Education Hub</a> › Psychology of Money</div>
+<div class="kicker">LESSON 5 OF 5</div>
+<h1>🧠 Psychology of Money</h1>
+<div class="progress"><span style="width:100%"></span></div>
+<p class="lead">Money is more than notes, coins or numbers on a screen. Digital assets introduce new ways of thinking about trust, ownership, control, scarcity, utility and value. This lesson explores how technology can influence money habits without assuming that crypto must replace fiat.</p>
+
+<h2>1. Trust: from institution to verification</h2>
+<p>Traditional finance relies heavily on institutions such as banks, payment providers, central banks and governments. Blockchain introduces another possibility: certain records and network rules can be independently verified. This does not eliminate trust. Users may still depend on wallet software, developers, exchanges, custodians, internet infrastructure and legal systems.</p>
+<div class="callout"><strong>Key idea:</strong> Digital finance can change where trust is placed rather than eliminating the need for trust.</div>
+
+<h2>2. Ownership can feel different</h2>
+<p>Traditional financial assets are often accessed through an institution. Some digital assets allow self-custody, where the user controls the cryptographic credentials needed to access the asset. This can create a psychological shift: <strong>“I can control access to my digital assets myself.”</strong></p>
+<div class="security"><strong>HILEX safety rule:</strong> Greater control brings greater responsibility. Never share your seed phrase, recovery phrase, wallet passphrase or private key.</div>
+
+<h2>3. Control versus convenience</h2>
+<p>People do not choose payment systems solely because they provide greater control. They also care about speed, simplicity, cost, security, reliability and convenience. A decentralized system that is difficult to use may struggle to achieve everyday adoption.</p>
+<div class="callout"><strong>Ask two questions:</strong> “Is it decentralized?” and “Does it solve a real problem for ordinary people?”</div>
+
+<h2>4. Digital networks can change how we think about borders</h2>
+<p>Digital assets can operate across networks accessible from different countries. This can change how people think about local and international transfers, commerce and economic participation. But digital technology does not remove national laws, taxation, regulation, exchange controls or infrastructure requirements.</p>
+<p><strong>Borderless technology does not mean a lawless economy.</strong></p>
+
+<h2>5. Digital generations may develop different habits</h2>
+<p>People increasingly interact with mobile payments, online banking, digital identities, e-commerce and virtual services. For digitally connected generations, value existing primarily on a screen may feel increasingly normal. But being digital does not automatically make something good money.</p>
+<div class="example"><strong>Responsible questions:</strong><br>Is it secure? Is it useful? Is it accepted? Is it sufficiently reliable for its intended purpose?</div>
+
+<h2>6. Scarcity can influence perception</h2>
+<p>Some digital assets have predetermined or limited issuance rules. Scarcity can affect how people perceive value, but <strong>scarcity alone does not create value</strong>. Something can be extremely scarce and still have little demand. Value can depend on utility, demand, confidence, accessibility, network participation and market conditions.</p>
+
+<h2>7. Transparency creates a different kind of trust</h2>
+<p>Some blockchain networks allow transactions and network information to be publicly inspected. This can shift the question from <strong>“Which institution do I trust?”</strong> toward <strong>“What can I independently verify?”</strong></p>
+<p>Verification has limits. Seeing a transaction on a blockchain does not prove that a project is legitimate, an investment is safe or an asset has a particular economic value.</p>
+<div class="callout"><strong>Key idea:</strong> Verification and judgment are not the same thing.</div>
+
+<h2>8. Utility can turn technology into behaviour</h2>
+<p>People generally adopt technologies when those technologies become useful. For a digital asset to become part of everyday economic activity, people need practical reasons to earn it, hold it, transfer it, spend it and accept it. Merchants also need a reason to accept it.</p>
+<div class="example"><strong>Utility pathway:</strong><br>Earn → Hold → Transfer → Spend → Accept</div>
+
+<h2>9. Network effects can change money habits</h2>
+<p>A payment method becomes more useful when more people and businesses are willing and able to use it. If only a handful of merchants accept something, its everyday usefulness may be limited. As participation grows, usefulness can increase. But network size alone does not guarantee success: security, infrastructure, regulation, reliability and genuine economic activity still matter.</p>
+
+<h2>10. Digital assets do not have to replace fiat to matter</h2>
+<p>The future does not necessarily have to be <strong>crypto OR fiat</strong>. Different systems may coexist: cash, bank deposits, mobile money, digital assets, stablecoins and other emerging forms of digital money. Different technologies can serve different purposes.</p>
+<div class="callout"><strong>A stronger question:</strong> How could digital assets change the way people understand and use money?</div>
+
+<h2>🌍 Africa Scenario — The Merchant's Decision</h2>
+<p>Imagine an African merchant who accepts cash and mobile money. Customers begin asking the merchant to accept a digital asset. Before saying yes, the merchant should consider:</p>
+<div class="keyterms">
+  <div><strong>Trust</strong><br>Do I understand how this payment works?</div>
+  <div><strong>Stability</strong><br>What happens if its market value changes significantly?</div>
+  <div><strong>Cost</strong><br>What will receiving, transferring or converting it cost?</div>
+  <div><strong>Demand</strong><br>Are customers genuinely asking to use it?</div>
+  <div><strong>Utility</strong><br>What can my business actually do with the asset after receiving it?</div>
+  <div><strong>Compliance</strong><br>What laws, tax rules or regulatory requirements apply in my country?</div>
+</div>
+<p>Adoption therefore becomes an informed business decision, not simply excitement about new technology.</p>
+
+<div class="quiz">
+<h2>Knowledge Check</h2>
+<details><summary>1. Does blockchain eliminate the need for trust?</summary><p><strong>Answer:</strong> No. It can allow certain information to be independently verified, but users may still depend on software, services, people and institutions.</p></details>
+<details><summary>2. Does self-custody provide greater control without additional responsibility?</summary><p><strong>Answer:</strong> No. Greater direct control also means greater responsibility for protecting wallet credentials.</p></details>
+<details><summary>3. Does scarcity automatically make a digital asset valuable?</summary><p><strong>Answer:</strong> No. Scarcity is only one factor. Demand, utility and other economic factors also matter.</p></details>
+<details><summary>4. Why is utility important for adoption?</summary><p><strong>Answer:</strong> Because people and businesses need practical reasons to use a technology repeatedly.</p></details>
+<details><summary>5. Must digital assets replace fiat currencies to influence the future of money?</summary><p><strong>Answer:</strong> No. Different forms of traditional and digital money may coexist and serve different purposes.</p></details>
+</div>
+
+<div class="example"><strong>🧠 Final Reflection</strong><br><br>Technology can change <strong>how money works</strong>.<br>Utility can change <strong>how money is used</strong>.<br>But trust, habits, incentives and human choices influence <strong>whether people adopt it</strong>.<br><br><strong>If technology can change the system, what must change before people change how they use money?</strong></div>
+
+<div class="callout"><strong>HILEX principle:</strong> Education before participation. Understand the technology, understand the risks, understand the utility — and make informed decisions.</div>
+
+<div class="example"><strong>Foundation Course complete 🎓</strong><br>You have completed the five-part HILEX foundation pathway: Blockchain Basics, Digital Assets, Wallet Security, Web3 and Psychology of Money.</div>
+
+<div class="lesson-nav"><a href="web3.html">← Web3</a><a href="index.html">Return to Education Hub →</a></div>
+</main>
+
+<footer id="eduFooter">HILEX • Africa Digital Economy Mission Hub<br><span class="small" style="color:#c8d6d0">Independent educational platform. Never share passwords, private keys or wallet passphrases with HILEX.</span></footer>
+<script>
+if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js"));
+</script>
+<script>
+/* Language selector is retained for consistency with the 14-language HILEX Education UI.
+   English is the finalized source lesson. The psychology-of-money dictionaries can be
+   added in the multilingual expansion without changing this page's visual structure. */
+(function(){
+  const SUPPORTED=["en","fr","pt","sw","sn","zu","bem","ny","nd","tn","st","ss","ts","ve"];
+  const sel=document.getElementById("eduLanguage");
+  const key="hilex-language";
+  let code=localStorage.getItem(key)||"en";
+  if(!SUPPORTED.includes(code)) code="en";
+  if(sel) {
+    sel.value=code;
+    sel.addEventListener("change", e => {
+      localStorage.setItem(key,e.target.value);
+      /* English remains displayed until Lesson 5 translations are installed. */
+    });
+  }
+})();
+</script>
+</body>
+</html>
