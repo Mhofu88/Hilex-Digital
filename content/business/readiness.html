@@ -54,7 +54,16 @@ function scoreQuiz(){
   const b=document.getElementById('scorebox');
   b.classList.add('show');
   if(answered<10){
-    b.innerHTML='<strong>Please answer all 10 questions.</strong><br>You have answered '+answered+' of 10.';
+   const lang = localStorage.getItem('hilex-language') || 'en';
+
+const answeredMessage = lang === 'st'
+  ? 'O arabile dipotso tse ' + answered + ' ho tse 10.'
+  : 'You have answered ' + answered + ' of 10.';
+
+const warningMessage = lang === 'st'
+  ? 'Ka kopo araba dipotso tsohle tse 10.'
+  : 'Please answer all 10 questions.'; 
+    b.innerHTML='<strong>Please answer all 10 questions.</strong><br>'O arabile dipotso tse '+answered+' ho tse 10.';
     b.scrollIntoView({behavior:'smooth'});
     return;
   }
