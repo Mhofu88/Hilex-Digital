@@ -4,14 +4,34 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
-<meta content="HILEX — Africa Digital Economy Mission Hub. Learn, connect, build, adopt and empower through practical digital-economy education." name="description"/>
+<meta content="HILEX DIGITAL — Africa Digital Economy Education & Innovation Hub. Independent, evidence-based digital-economy learning for Africa." name="description"/>
 <meta content="#0b3d2e" name="theme-color"/>
-<title>HILEX | Africa Digital Economy Mission Hub</title>
+<title>HILEX DIGITAL | Africa Digital Economy Education & Innovation Hub</title>
 <link href="css/style.css" rel="stylesheet"/>
 <link href="/manifest.webmanifest" rel="manifest"/>
 <link href="/images/icons/apple-touch-icon.png" rel="apple-touch-icon"/>
 </head>
 <body>
+<!-- HILEX institutional first-visit welcome; existing page below remains unchanged. -->
+<div id="hilexWelcome" class="hilex-welcome" role="dialog" aria-modal="true" aria-labelledby="hilexWelcomeTitle" aria-describedby="hilexWelcomeDesc" hidden>
+  <div class="hilex-welcome__stars" aria-hidden="true"></div>
+  <div class="hilex-welcome__panel">
+    <div class="hilex-welcome__crest" aria-hidden="true"><span>H</span></div>
+    <p class="hilex-welcome__eyebrow">WELCOME TO THE FUTURE OF AFRICAN LEARNING</p>
+    <div class="hilex-welcome__globe" aria-hidden="true"><span>🌍</span></div>
+    <h1 id="hilexWelcomeTitle">HILEX <em>DIGITAL</em></h1>
+    <p class="hilex-welcome__identity">Africa Digital Economy<br/>Education &amp; Innovation Hub</p>
+    <div class="hilex-welcome__rule" aria-hidden="true"></div>
+    <p id="hilexWelcomeDesc" class="hilex-welcome__statement">Empowering Africa through digital knowledge, innovation and opportunity.</p>
+    <p class="hilex-welcome__motto">LEARN <b>•</b> CONNECT <b>•</b> BUILD <b>•</b> INNOVATE</p>
+    <div class="hilex-welcome__actions">
+      <button type="button" id="hilexWelcomeEnter" class="hilex-welcome__button">Enter HILEX Digital <span aria-hidden="true">→</span></button>
+      <a id="hilexWelcomeLearn" href="content/education/index.html" class="hilex-welcome__learn">Start Learning</a>
+    </div>
+    <p class="hilex-welcome__foot">Independent education · Technology-neutral · Africa-focused</p>
+  </div>
+</div>
+
 <header class="topbar">
 <a class="brand" href="#home"><span class="brand-mark">H</span><span><strong>HILEX</strong><small data-i18n="footer.tagline">Africa Digital Economy Mission Hub</small></span></a>
 <button aria-label="Open menu" class="menu-toggle" id="menuToggle">☰</button>
@@ -129,5 +149,39 @@
       });
     }
   </script>
+<script>
+/* Welcome appears once per browser storage profile; safe fallback if storage is blocked. */
+(function () {
+  var welcome = document.getElementById('hilexWelcome');
+  var enter = document.getElementById('hilexWelcomeEnter');
+  var learn = document.getElementById('hilexWelcomeLearn');
+  var key = 'hilex-institutional-welcome-v1';
+  var previousFocus = document.activeElement;
+  function seen() { try { return localStorage.getItem(key) === '1'; } catch (e) { return false; } }
+  function markSeen() { try { localStorage.setItem(key, '1'); } catch (e) {} }
+  function closeWelcome() {
+    markSeen();
+    welcome.hidden = true;
+    document.body.classList.remove('hilex-welcome-open');
+    if (previousFocus && typeof previousFocus.focus === 'function' && previousFocus !== document.body) previousFocus.focus();
+  }
+  if (!seen()) {
+    welcome.hidden = false;
+    document.body.classList.add('hilex-welcome-open');
+    enter.focus({preventScroll:true});
+  }
+  enter.addEventListener('click', closeWelcome);
+  learn.addEventListener('click', markSeen);
+  welcome.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') { closeWelcome(); return; }
+    if (event.key === 'Tab') {
+      var targets = [enter, learn];
+      var idx = targets.indexOf(document.activeElement);
+      if (event.shiftKey && idx <= 0) { event.preventDefault(); learn.focus(); }
+      else if (!event.shiftKey && idx === targets.length - 1) { event.preventDefault(); enter.focus(); }
+    }
+  });
+})();
+</script>
 </body>
 </html>
