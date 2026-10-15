@@ -40,3 +40,29 @@ footer .footer-brand p {
 .intro p,.section-head p,.cards p,.resource-card p,.feature p,.timeline p,.news-card p,.regions span{color:#405b53}
 .hero p,.hero-copy p,.mission-card p,.section .cta-panel p,.section .cta-panel li,.section .cta-panel .small,.cta-panel p,.cta-panel li,.cta-panel .small{color:#e8f1ed}
 footer .small,footer .copyright,footer .footer-brand p{color:#b9cbc3}
+
+/* HILEX DIGITAL — institutional welcome screen (isolated styles). */
+.hilex-welcome[hidden]{display:none!important}
+body.hilex-welcome-open{overflow:hidden}
+.hilex-welcome{position:fixed;inset:0;z-index:99999;overflow-y:auto;overscroll-behavior:contain;background:radial-gradient(circle at 50% 38%,#1a7459 0%,#0b3d2e 42%,#041f19 100%);color:#fff;display:flex;justify-content:center;align-items:center;padding:22px 15px;isolation:isolate}
+.hilex-welcome:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.24;background:repeating-linear-gradient(90deg,transparent 0 74px,rgba(215,167,47,.12) 75px 76px),repeating-linear-gradient(0deg,transparent 0 74px,rgba(215,167,47,.1) 75px 76px)}
+.hilex-welcome__panel{position:relative;z-index:1;width:min(100%,740px);padding:25px 18px 29px;text-align:center;border:1px solid rgba(231,192,87,.5);border-radius:24px;background:linear-gradient(160deg,rgba(4,30,24,.68),rgba(12,75,56,.66));box-shadow:0 20px 80px rgba(0,0,0,.36),inset 0 0 0 5px rgba(255,255,255,.025)}
+.hilex-welcome__crest{width:58px;height:58px;margin:0 auto 12px;border:2px solid #f0ca69;border-radius:50%;display:grid;place-items:center;color:#f0ca69;font-weight:900;font-size:2rem;box-shadow:0 0 0 5px rgba(215,167,47,.1)}
+.hilex-welcome__eyebrow{margin:10px 0 0;color:#f5d78c;font-size:.67rem;font-weight:800;letter-spacing:.16em}
+.hilex-welcome__globe{font-size:clamp(3.5rem,11vw,6rem);line-height:1.15;filter:drop-shadow(0 8px 18px rgba(0,0,0,.3));margin:6px auto 0}
+.hilex-welcome h1{font-size:clamp(2.3rem,8vw,4.7rem);letter-spacing:.08em;line-height:1.06;margin:4px 0 8px;font-weight:900;color:#fff}
+.hilex-welcome h1 em{font-style:normal;color:#f1c55a}
+.hilex-welcome__identity{font-size:clamp(1rem,3vw,1.45rem);line-height:1.3;font-weight:700;margin:8px 0;color:#fff}
+.hilex-welcome__rule{width:115px;height:2px;background:#d7a72f;margin:17px auto}
+.hilex-welcome__statement{max-width:510px;margin:0 auto;color:#e4f1e9;font-size:clamp(.92rem,2.6vw,1.12rem);line-height:1.5}
+.hilex-welcome__motto{font-size:clamp(.68rem,2.2vw,.91rem);font-weight:800;letter-spacing:.1em;color:#f4d483;margin:20px auto}
+.hilex-welcome__motto b{padding:0 5px;color:#fff}
+.hilex-welcome__actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.hilex-welcome__button,.hilex-welcome__learn{min-width:195px;padding:13px 19px;border-radius:10px;font-size:.95rem;font-weight:800;text-decoration:none;cursor:pointer;line-height:1.3}
+.hilex-welcome__button{background:#e3b642;color:#152a20;border:2px solid #e3b642}
+.hilex-welcome__learn{color:#fff;border:2px solid rgba(255,255,255,.68);background:rgba(255,255,255,.08)}
+.hilex-welcome__button:hover,.hilex-welcome__button:focus-visible{background:#f8d47b}
+.hilex-welcome__learn:hover,.hilex-welcome__learn:focus-visible{background:rgba(255,255,255,.2)}
+.hilex-welcome__foot{margin:20px 0 0;font-size:.72rem;letter-spacing:.025em;color:#c9dfd2}
+@media(max-width:480px){.hilex-welcome{align-items:flex-start;padding:12px}.hilex-welcome__panel{margin:auto 0;padding:18px 13px 21px}.hilex-welcome__actions{flex-direction:column;gap:9px}.hilex-welcome__button,.hilex-welcome__learn{width:100%}.hilex-welcome__foot{font-size:.64rem}}
+@media(prefers-reduced-motion:reduce){.hilex-welcome *{scroll-behavior:auto}}
