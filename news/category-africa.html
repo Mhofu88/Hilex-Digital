@@ -1,0 +1,30 @@
+<!doctype html>
+<html><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="HILEX News: Follow developments shaping African participation. Verified digital-economy explainers connecting important developments to African context and learning." name="description"/><title>Follow developments shaping African participation. | HILEX</title><link href="news.css" rel="stylesheet"/> <script src="../js/language-state.js"></script>
+<style>
+.hilex-lang-select{margin-left:12px;max-width:150px;padding:8px 9px;border:1px solid #cda334;border-radius:9px;background:#fff;color:#123e31;font:inherit;font-size:0.9rem;cursor:pointer}
+@media(max-width:600px){.hilex-lang-select{display:block;margin:10px 0 0;max-width:100%;font-size:0.88rem}.top .nav{display:flex;flex-wrap:wrap;align-items:center;gap:8px}}
+</style></head><body><header class="top"><b>HILEX DIGITAL</b><nav class="nav"><a data-hilex-i18n="t0" href="../index.html">← HILEX Home</a><a data-hilex-i18n="t1" href="index.html">News Hub</a><select aria-label="Select language / Khetha puo" class="hilex-lang-select" id="hilexNewsLanguage"><option value="en">English</option><option value="st">Sesotho</option></select></nav></header><section class="hero"><span class="kicker" data-hilex-i18n="t2">AFRICA</span><h1 data-hilex-i18n="t3">Follow developments shaping African participation.</h1><p data-hilex-i18n="t4">Digital inclusion, mobile finance, infrastructure, regional integration and country policy.</p></section><main class="section"><div class="article"><span class="tag" data-hilex-i18n="t5">EDITORIAL FRAMEWORK READY</span><h2 data-hilex-i18n="t6">Verified stories will appear here.</h2><p data-hilex-i18n="t7">Stories are added after checking status, date and appropriate sources.</p><p><a class="textlink" data-hilex-i18n="t8" href="../content/africa/">Related HILEX learning hub →</a></p><div class="notice"><b data-hilex-i18n="notice-label">Template:</b><span data-hilex-i18n="notice-body"> WHAT HAPPENED → WHY IT MATTERS → WHO MAY BE AFFECTED → AFRICAN CONTEXT → OFFICIAL SOURCE → RELATED HILEX LESSON</span></div></div></main><footer><b data-hilex-i18n="t10">HILEX — Africa Digital Economy Mission Hub</b><p data-hilex-i18n="t11">Independent education. Verify fast-changing developments through cited official sources.</p></footer><script>
+(function(){
+  "use strict";
+  const DICT = {"t0": {"en": "← HILEX Home", "st": "← Lehae la HILEX"}, "t1": {"en": "News Hub", "st": "Setsi sa Litaba"}, "t2": {"en": "AFRICA", "st": "AFRIKA"}, "t3": {"en": "Follow developments shaping African participation.", "st": "Latela liphetoho tse amang ho nka karolo ha Maafrika."}, "t4": {"en": "Digital inclusion, mobile finance, infrastructure, regional integration and country policy.", "st": "Kenyeletso moruong oa dijithale, litšebeletso tsa lichelete ka mohala, meralo ea motheo, kopanyo ea libaka le maano a linaha."}, "t5": {"en": "EDITORIAL FRAMEWORK READY", "st": "MORALO OA BOHLOPHISI O SE O LOKILE"}, "t6": {"en": "Verified stories will appear here.", "st": "Litaba tse netefalitsoeng li tla hlaha mona."}, "t7": {"en": "Stories are added after checking status, date and appropriate sources.", "st": "Litaba li kenngoa ka mor’a ho netefatsa boemo ba tsona, letsatsi le mehloli e loketseng."}, "t8": {"en": "Related HILEX learning hub →", "st": "Setsi sa thuto sa HILEX se amanang le taba ena →"}, "t9": {"en": "Template: WHAT HAPPENED → WHY IT MATTERS → WHO MAY BE AFFECTED → AFRICAN CONTEXT → OFFICIAL SOURCE → RELATED HILEX LESSON", "st": "Sebopeho: HO ETSAHETSE ENG → HOBANENG HO LE BOHLOKOA → KE BOMANG BA KA AMEHANG → MAEMO A AFRIKA → MOHLOLI OA SEMMUSO → THUTO EA HILEX E AMANANG LE TABA"}, "t10": {"en": "HILEX — Africa Digital Economy Mission Hub", "st": "HILEX — Setsi sa Moruo oa Dijithale sa Afrika"}, "t11": {"en": "Independent education. Verify fast-changing developments through cited official sources.", "st": "Thuto e ikemetseng. Netefatsa litaba tse fetohang kapele ka mehloli ea semmuso e bontšitsoeng."}, "notice-label": {"en": "Template:", "st": "Sebopeho:"}, "notice-body": {"en": " WHAT HAPPENED → WHY IT MATTERS → WHO MAY BE AFFECTED → AFRICAN CONTEXT → OFFICIAL SOURCE → RELATED HILEX LESSON", "st": " HO ETSAHETSE ENG → HOBANENG HO LE BOHLOKOA → KE BOMANG BA KA AMEHANG → MAEMO A AFRIKA → MOHLOLI OA SEMMUSO → THUTO EA HILEX E AMANANG LE TABA"}};
+  const KEY = "hilex-language";
+  const selector = document.getElementById("hilexNewsLanguage");
+  function apply(lang){
+    const current = lang === "st" ? "st" : "en";
+    document.querySelectorAll("[data-hilex-i18n]").forEach(function(el){
+      const entry = DICT[el.getAttribute("data-hilex-i18n")];
+      if(entry) el.textContent = entry[current];
+    });
+    document.documentElement.lang = current;
+    selector.value = current;
+  }
+  let stored = "en";
+  try { stored = localStorage.getItem(KEY) || "en"; } catch(e) {}
+  apply(stored);
+  selector.addEventListener("change",function(){
+    try { localStorage.setItem(KEY, selector.value); } catch(e) {}
+    apply(selector.value);
+  });
+  window.addEventListener("storage",function(e){if(e.key===KEY) apply(e.newValue);});
+})();
+</script></body></html>
