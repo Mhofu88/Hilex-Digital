@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/><meta content="Take a free 10-question digital readiness self-check for your business. Identify gaps in online presence, payments, cybersecurity and digital operations." name="description"/>
+<meta content="#0b3d2e" name="theme-color"/>
+<title>Digital Readiness Check for Small Businesses | HILEX</title>
+<link href="business.css" rel="stylesheet"/>
+<link href="https://hilexdigital.co.zw/content/business/readiness.html" rel="canonical"/><meta content="article" property="og:type"/><meta content="HILEX Digital" property="og:site_name"/><meta content="Digital Readiness Check for Small Businesses | HILEX" property="og:title"/><meta content="Take a free 10-question digital readiness self-check for your business. Identify gaps in online presence, payments, cybersecurity and digital operations." property="og:description"/><meta content="https://hilexdigital.co.zw/content/business/readiness.html" property="og:url"/><meta content="summary" name="twitter:card"/><meta content="Digital Readiness Check for Small Businesses | HILEX" name="twitter:title"/><meta content="Take a free 10-question digital readiness self-check for your business. Identify gaps in online presence, payments, cybersecurity and digital operations." name="twitter:description"/><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HILEX Digital","item":"https://hilexdigital.co.zw/"},{"@type":"ListItem","position":2,"name":"Business Hub","item":"https://hilexdigital.co.zw/content/business/index.html"},{"@type":"ListItem","position":3,"name":"Digital Readiness Check","item":"https://hilexdigital.co.zw/content/business/readiness.html"}]},{"@type":"WebPage","name":"Digital Readiness Check for Small Businesses | HILEX","description":"Take a free 10-question digital readiness self-check for your business. Identify gaps in online presence, payments, cybersecurity and digital operations.","url":"https://hilexdigital.co.zw/content/business/readiness.html","inLanguage":"en","isPartOf":{"@type":"WebSite","name":"HILEX Digital","url":"https://hilexdigital.co.zw/"}}]}</script>
+</head>
+<body>
+<header class="topbar"><a class="brand" href="../../index.html"><span>H</span>HILEX</a><nav><a href="../../index.html">← HILEX Home</a><a href="index.html">Business Hub</a></nav><select id="businessLanguage" class="lang-select" aria-label="Language"><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="sw">Kiswahili</option><option value="sn">Shona</option><option value="zu">isiZulu</option><option value="bem">Bemba</option><option value="ny">Chichewa</option><option value="nd">Ndebele</option><option value="tn">Setswana</option><option value="st">Sesotho</option><option value="ss">siSwati</option><option value="ts">itsonga</option><option value="ve">Tshivenda</option></select></header>
+<main class="section lesson">
+<span class="kicker">HILEX BUSINESS</span>
+<h1>Digital Readiness Check</h1>
+<p class="lead">Answer all ten questions. This is a practical self-check, not a certification.</p>
+<div class="quiz" id="quiz">
+<div class="question"><strong>1. Does your business have a professional website or online business page?</strong><label><input type="radio" name="q1" value="1"> Yes</label><label><input type="radio" name="q1" value="0"> Not yet</label></div>
+<div class="question"><strong>2. Do you use a domain-based business email or another clearly managed professional contact channel?</strong><label><input type="radio" name="q2" value="1"> Yes</label><label><input type="radio" name="q2" value="0"> Not yet</label></div>
+<div class="question"><strong>3. Can customers pay you through at least one suitable digital payment method?</strong><label><input type="radio" name="q3" value="1"> Yes</label><label><input type="radio" name="q3" value="0"> Not yet</label></div>
+<div class="question"><strong>4. Do you keep organised digital sales, expense or customer records?</strong><label><input type="radio" name="q4" value="1"> Yes</label><label><input type="radio" name="q4" value="0"> Not yet</label></div>
+<div class="question"><strong>5. Do you regularly back up important business data?</strong><label><input type="radio" name="q5" value="1"> Yes</label><label><input type="radio" name="q5" value="0"> Not yet</label></div>
+<div class="question"><strong>6. Do important business accounts use strong unique passwords and two-factor authentication where available?</strong><label><input type="radio" name="q6" value="1"> Yes</label><label><input type="radio" name="q6" value="0"> Not yet</label></div>
+<div class="question"><strong>7. Can you recognise common phishing, impersonation and payment-redirection scams?</strong><label><input type="radio" name="q7" value="1"> Yes</label><label><input type="radio" name="q7" value="0"> Not yet</label></div>
+<div class="question"><strong>8. Can customers reliably contact your business online and receive timely responses?</strong><label><input type="radio" name="q8" value="1"> Yes</label><label><input type="radio" name="q8" value="0"> Not yet</label></div>
+<div class="question"><strong>9. Can customers view your products or services digitally through a catalogue, website or storefront?</strong><label><input type="radio" name="q9" value="1"> Yes</label><label><input type="radio" name="q9" value="0"> Not yet</label></div>
+<div class="question"><strong>10. If you want customers outside your home market, have you considered payments, delivery, currency, tax and regulatory requirements?</strong><label><input type="radio" name="q10" value="1"> Yes</label><label><input type="radio" name="q10" value="0"> Not yet</label></div>
+<button class="btn primary" onclick="scoreQuiz()">Calculate My Score</button>
+<div id="scorebox" class="scorebox"></div>
+</div>
+<div class="notice"><strong>Next step:</strong> Use your result to choose which HILEX Business modules to study. A low score is simply a starting point.</div>
+<div class="lesson-nav"><a href="index.html">← Business Hub</a><a href="online-presence.html">Next: Online Presence →</a></div>
+</main>
+<footer class="footer"><small><strong>HILEX DIGITAL — Africa Digital Economy Education & Innovation Hub.</strong> Independent, technology-neutral educational platform. Business information is general education, not legal, tax, investment or regulatory advice. Verify requirements in your country before implementing financial or commercial services.</small></footer>
+<script>
+const gapMap = {
+  1: {title:'Professional website or online presence', text:'Create a clear, mobile-friendly place where customers can understand your business and take action.', lesson:'Online Presence', href:'online-presence.html', service:'website'},
+  2: {title:'Professional domain & business contact', text:'Strengthen your digital identity with a professional domain and, where suitable, branded business email. A trusted provider can manage registration, configuration and renewals while your business remains clearly identified as the domain owner.', lesson:'Online Presence', href:'online-presence.html', service:'domain'},
+  3: {title:'Digital payments', text:'Add suitable digital payment options and establish a reliable process for receipts and reconciliation.', lesson:'Digital Payments', href:'digital-payments.html', service:'payments'},
+  4: {title:'Digital business records', text:'Organise sales, expenses and customer records so decisions are based on reliable information.', lesson:'Digital Readiness', href:'index.html', service:'records'},
+  5: {title:'Backups & business resilience', text:'Protect important business information with regular backups and a simple recovery plan.', lesson:'Cybersecurity', href:'cybersecurity.html', service:'backup'},
+  6: {title:'Account security', text:'Use strong unique passwords and two-factor authentication wherever available.', lesson:'Cybersecurity', href:'cybersecurity.html', service:'security'},
+  7: {title:'Fraud & phishing awareness', text:'Build the ability to recognise impersonation, phishing and payment-redirection attempts before money or data is lost.', lesson:'Cybersecurity', href:'cybersecurity.html', service:'security'},
+  8: {title:'Online customer communication', text:'Create dependable online contact channels and a process for responding to customers promptly.', lesson:'Online Presence', href:'online-presence.html', service:'communications'},
+  9: {title:'Digital catalogue or storefront', text:'Make products or services easy to discover through a catalogue, website, storefront or business app.', lesson:'E-commerce & Marketing', href:'ecommerce.html', service:'catalogue'},
+  10:{title:'Cross-border readiness', text:'Plan for payments, delivery, currency, tax and regulatory requirements before expanding into other markets.', lesson:'Cross-Border Trade', href:'cross-border.html', service:'cross-border'}
+};
+
+ // Anonymous aggregate analytics. No answers, scores or personal details are transmitted.
+ const HILEX_FUNNEL_ENDPOINT = 'https://chigalex1-backend.onrender.com/bizapp/hilex-events';
+ const hilexTrackedThisPage = new Set();
+ function trackHilexEvent(event) {
+   if (hilexTrackedThisPage.has(event)) return;
+   hilexTrackedThisPage.add(event);
+   try {
+     fetch(HILEX_FUNNEL_ENDPOINT, {
+       method: 'POST',
+       mode: 'cors',
+       headers: {'Content-Type': 'application/json'},
+       body: JSON.stringify({event}),
+       keepalive: true
+     }).catch(() => {}); // Analytics must never interrupt learning or navigation.
+   } catch (_) {}
+ }
+ // A start means the visitor answered at least one question.
+ document.getElementById('quiz').addEventListener('change', function(event) {
+   if (event.target.matches('input[type="radio"][name^="q"]')) {
+     trackHilexEvent('assessment_start');
+   }
+ });
+ // Count an outbound commercial referral only when its link is activated.
+ document.getElementById('quiz').addEventListener('click', function(event) {
+   const link = event.target.closest('a[href*="bizappzw.co.zw/hilex/"]');
+   if (link) trackHilexEvent('bizapp_click');
+ });
+
+function scoreQuiz(){
+  let score=0, answered=0, gaps=[];
+  for(let i=1;i<=10;i++){
+    const x=document.querySelector('input[name="q'+i+'"]:checked');
+    if(x){answered++; score+=Number(x.value); if(x.value==='0') gaps.push(i);}
+  }
+  const b=document.getElementById('scorebox');
+  b.classList.add('show');
+  if (answered < 10) {
+     const t=window.hilexBusinessTranslate || (s=>s);
+   const answeredMessage=t('You have answered ') + answered + t(' of 10.');
+   const warningMessage=t('Please answer all 10 questions.');
+
+b.innerHTML =
+    '<strong>' + warningMessage + '</strong><br>' + answeredMessage;
+
+  b.scrollIntoView({ behavior: 'smooth' });
+  return;
+}
+
+  trackHilexEvent('assessment_complete');
+  const t=window.hilexBusinessTranslate || (s=>s);
+  const level=score<=3?'Starting Out':score<=7?'Developing':'Digitally Ready';
+  const advice=score<=3
+    ?'Build the foundations first. Focus on the priority gaps below before adding more complex digital tools.'
+    :score<=7
+      ?'You have useful foundations. Strengthen the specific gaps below and prioritise security before expansion.'
+      :'You have a strong foundation. Use the remaining gaps below to improve resilience, customer experience and responsible growth.';
+
+  let html='<h2>'+score+'/10 — '+t(level)+'</h2><p>'+t(advice)+'</p>';
+
+  if(gaps.length){
+    html+='<h3>'+t('Your priority gaps')+'</h3>';
+    gaps.forEach(function(i){
+      const g=gapMap[i];
+      html+='<div class="question"><strong>⚠ '+t(g.title)+'</strong><p>'+t(g.text)+'</p><a href="'+g.href+'">'+t('Recommended HILEX lesson: ')+t(g.lesson)+' →</a></div>';
+    });
+
+    const services=[...new Set(gaps.map(i=>gapMap[i].service))].join(',');
+    html+='<div class="notice"><strong>'+t('Ready to implement these improvements?')+'</strong><p>'+t('After understanding your needs through HILEX, you can use your preferred developer or explore BizApp ZW for commercial implementation support such as domain management, business email, websites, digital catalogues, apps and custom digital systems.')+'</p><p><a class="btn primary" target="_blank" rel="noopener" href="https://bizappzw.co.zw/hilex/?source=hilex&needs='+encodeURIComponent(services)+'">'+t('Explore BizApp ZW Implementation Support ↗')+'</a></p><small>'+t('HILEX education remains useful whether or not you choose BizApp ZW.')+'</small></div>';
+  } else {
+    html+='<div class="notice"><strong>'+t('No major gaps marked.')+'</strong><p>'+t('You answered Yes to all ten areas. Continue reviewing security, customer experience, resilience and changing regulatory requirements as your business grows.')+'</p></div>';
+  }
+
+  b.innerHTML=html;
+  b.scrollIntoView({behavior:'smooth'});
+}
+</script>
+<script src="business-i18n.js?v=institutional-3a"></script></body>
+</html>
