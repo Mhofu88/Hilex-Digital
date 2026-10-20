@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Learn to protect crypto wallets, recovery phrases, private keys and transactions. Recognize phishing and scams with practical wallet safety guidance.">
+<meta name="theme-color" content="#0b3d2e">
+<title>Crypto Wallet Security and Recovery Phrase Safety | HILEX</title>
+<style>
+
+:root{
+  --green:#0b3d2e;
+  --green2:#0f5a43;
+  --gold:#dda928;
+  --cream:#f7f3e8;
+  --ink:#17211d;
+  --muted:#405b53;
+  --card:#ffffff;
+  --line:#d8dfdb;
+  --warn:#fff5d9;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--cream);color:var(--ink);line-height:1.65}
+a{color:inherit}
+.topbar{position:sticky;top:0;z-index:20;background:var(--green);color:#fff;display:flex;align-items:center;gap:18px;padding:14px 5%;box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none;font-weight:800}
+.brand-mark{width:42px;height:42px;border:3px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold)}
+.topbar nav{margin-left:auto;display:flex;gap:16px;align-items:center}
+.topbar nav a{text-decoration:none;font-weight:700;font-size:.95rem}
+.hero{background:linear-gradient(135deg,var(--green),var(--green2));color:#fff;padding:64px 6% 56px}
+.eyebrow,.kicker{color:var(--gold);font-weight:900;letter-spacing:.11em;text-transform:uppercase;font-size:.82rem}
+.hero h1{font-size:clamp(2.2rem,6vw,4.2rem);line-height:1.03;margin:.4rem 0 1rem;max-width:900px}
+.hero p{font-size:1.1rem;max-width:780px;color:#edf5f1}
+.container{width:min(1100px,90%);margin:auto}
+.path{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:-28px auto 42px}
+.path a,.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;text-decoration:none;box-shadow:0 8px 25px rgba(0,0,0,.06)}
+.path b{display:block;color:var(--green);font-size:1.02rem;margin-top:7px}
+.path span{font-size:.92rem;color:var(--muted)}
+.section{padding:44px 0}
+.section h2{font-size:clamp(1.7rem,3vw,2.5rem);margin:.2rem 0 1rem}
+.lesson-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card h3{margin:.5rem 0}
+.card p{color:var(--muted)}
+.btn{display:inline-block;background:var(--gold);color:#171717;text-decoration:none;font-weight:800;padding:12px 18px;border-radius:12px;margin-top:8px}
+.btn.secondary{background:transparent;border:2px solid var(--green);color:var(--green)}
+.lesson{width:min(850px,90%);margin:38px auto 70px}
+.breadcrumbs{font-size:.92rem;color:var(--muted);margin-bottom:22px}
+.lesson h1{font-size:clamp(2.1rem,5vw,3.7rem);line-height:1.07;margin:.3rem 0 1rem}
+.lesson h2{margin-top:2.2rem;color:var(--green)}
+.lesson h3{margin-top:1.6rem}
+.lead{font-size:1.16rem;color:#36413c}
+.callout{border-left:5px solid var(--gold);background:#fff;padding:18px 20px;margin:24px 0;border-radius:10px}
+.security{background:var(--warn);border:1px solid #ecd89a;padding:20px;border-radius:14px;margin:24px 0}
+.keyterms{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.keyterms div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.example{background:#eaf4ef;border-radius:14px;padding:20px;margin:20px 0}
+.quiz{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;margin:28px 0}
+.quiz details{border-top:1px solid var(--line);padding:14px 0}
+.quiz details:first-of-type{border-top:0}
+.lesson-nav{display:flex;justify-content:space-between;gap:12px;margin-top:36px}
+.lesson-nav a{flex:1;text-decoration:none;border:2px solid var(--green);border-radius:12px;padding:14px;font-weight:800}
+.lesson-nav a:last-child{text-align:right;background:var(--green);color:#fff}
+footer{background:#082e23;color:#dce9e3;padding:30px 5%;text-align:center}
+.small{font-size:.9rem;color:var(--muted)}
+.progress{height:8px;background:#dfe6e2;border-radius:99px;overflow:hidden;margin:16px 0 30px}
+.progress span{display:block;height:100%;background:var(--gold)}
+@media(max-width:760px){
+  .topbar nav{display:none}
+  .path{grid-template-columns:1fr}
+  .lesson-grid{grid-template-columns:1fr}
+  .keyterms{grid-template-columns:1fr}
+  .lesson-nav{flex-direction:column}
+  .lesson-nav a:last-child{text-align:left}
+}
+
+</style>
+<link rel="manifest" href="/manifest.webmanifest">
+<link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png">
+<meta name="hilex-education-build" content="edu14-sesotho-wallet-v1">
+
+<!-- HILEX Education SEO Stage 2: metadata only; lesson and translation scripts preserved -->
+<link rel="canonical" href="https://hilexdigital.co.zw/content/education/wallet-security.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HILEX Digital">
+<meta property="og:title" content="Crypto Wallet Security and Recovery Phrase Safety | HILEX">
+<meta property="og:description" content="Learn to protect crypto wallets, recovery phrases, private keys and transactions. Recognize phishing and scams with practical wallet safety guidance.">
+<meta property="og:url" content="https://hilexdigital.co.zw/content/education/wallet-security.html">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LearningResource","name":"Wallet Security","headline":"Crypto Wallet Security and Recovery Phrase Safety | HILEX","description":"Learn to protect crypto wallets, recovery phrases, private keys and transactions. Recognize phishing and scams with practical wallet safety guidance.","url":"https://hilexdigital.co.zw/content/education/wallet-security.html","inLanguage":"en","isAccessibleForFree":true,"publisher":{"@type":"Organization","name":"HILEX Digital","url":"https://hilexdigital.co.zw/"},"learningResourceType":"Lesson","educationalLevel":"Beginner","isPartOf":{"@type":"Course","name":"HILEX Digital Economy Foundation Course","url":"https://hilexdigital.co.zw/content/education/index.html"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"HILEX Digital","item":"https://hilexdigital.co.zw/"},{"@type":"ListItem","position":2,"name":"Education Hub","item":"https://hilexdigital.co.zw/content/education/index.html"},{"@type":"ListItem","position":3,"name":"Wallet Security","item":"https://hilexdigital.co.zw/content/education/wallet-security.html"}]}}</script>
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="/"><span class="brand-mark">H</span><span>HILEX</span></a>
+<nav><a href="../../index.html" data-edu-nav="home">← HILEX Home</a><a href="index.html" data-edu-nav="hub">Education Hub</a></nav>
+<select id="eduLanguage" class="edu-language" aria-label="Language"><option value="en">English</option><option value="fr">Français</option><option value="pt">Português</option><option value="sw">Kiswahili</option><option value="sn">Shona</option><option value="zu">isiZulu</option><option value="bem">Bemba</option><option value="ny">Chichewa</option><option value="nd">Ndebele</option><option value="tn">Setswana</option><option value="st">Sesotho</option><option value="ss">siSwati</option><option value="ts">itsonga</option><option value="ve">Tshivenda</option></select>
+</header>
+
+<main class="lesson" id="eduContent" data-edu-page="wallet-security">
+<div class="breadcrumbs"><a href="/">HILEX</a> › <a href="index.html">Education</a> › Wallet Security</div>
+<div class="kicker">LESSON 3 OF 4 • ESSENTIAL SAFETY</div>
+<h1>Wallet Security</h1>
+<div class="progress"><span style="width:75%"></span></div>
+<p class="lead">A blockchain transaction may be irreversible. Good wallet habits are therefore not optional: they are part of owning and using digital assets responsibly.</p>
+
+<div class="security"><strong>Golden rule:</strong> Never give anyone your seed phrase, recovery phrase, passphrase or private key. HILEX will never ask you for them.</div>
+
+<h2>1. Understand your wallet credentials</h2>
+<p>Your wallet address is usually designed to be shared so others can send assets to you. Your private key or recovery phrase is different: it provides control over the wallet. Anyone who obtains it may be able to control your assets.</p>
+
+<h2>2. Store recovery information safely</h2>
+<p>Keep recovery information offline in a secure location where only you or a trusted recovery arrangement can access it. Avoid ordinary chat messages, email drafts, screenshots or cloud notes for storing secret wallet credentials.</p>
+
+<h2>3. Stop phishing before it starts</h2>
+<p>Scammers often imitate legitimate websites, support teams, wallet apps and social-media accounts. They may create urgency: “verify now,” “claim now,” “your wallet will be suspended,” or “send funds to unlock.” Verify independently before acting.</p>
+
+<h2>4. Check every transaction</h2>
+<p>Before confirming a transaction, verify the recipient address, asset, network and amount. For an unfamiliar destination, consider a small test transaction first when fees and the network make that practical.</p>
+
+<h2>5. Protect the device</h2>
+<ul>
+<li>Use a strong screen lock and device updates.</li>
+<li>Install wallet software only from official sources.</li>
+<li>Avoid unknown APK files, browser extensions and “wallet repair” tools.</li>
+<li>Do not conduct sensitive wallet activity on shared or untrusted devices.</li>
+<li>Use multi-factor authentication for custodial accounts where supported.</li>
+</ul>
+
+<div class="example"><strong>Example:</strong> Someone in a Telegram or WhatsApp group offers to “synchronize” or “validate” your wallet and asks for the recovery phrase. That is a red flag. A legitimate support process should not require your secret recovery phrase.</div>
+
+<h2>Before you press Send</h2>
+<div class="keyterms">
+<div><strong>✓ Recipient</strong><br>Check the full address, not only the first few characters.</div>
+<div><strong>✓ Network</strong><br>Confirm sender and receiver support the same network.</div>
+<div><strong>✓ Amount</strong><br>Check decimal places and transaction fees.</div>
+<div><strong>✓ Purpose</strong><br>Understand exactly what you are approving.</div>
+</div>
+
+<div class="quiz">
+<h2>Knowledge Check</h2>
+<details><summary>1. Can you safely share your wallet address?</summary><p><strong>Answer:</strong> Generally yes, if it is the public receiving address. Never confuse it with a private key or recovery phrase.</p></details>
+<details><summary>2. A support agent asks for your seed phrase to fix your wallet. What should you do?</summary><p><strong>Answer:</strong> Do not provide it. Stop the interaction and verify support through official channels.</p></details>
+<details><summary>3. Why can a small test transaction help?</summary><p><strong>Answer:</strong> It can help confirm that the address and network are correct before sending a larger amount.</p></details>
+</div>
+<div class="lesson-nav"><a href="digital-assets.html">← Digital Assets</a><a href="web3.html">Next: Web3 →</a></div>
+</main>
+
+<footer id="eduFooter">HILEX DIGITAL • Africa Digital Economy Education & Innovation Hub<br><span class="small" style="color:#c8d6d0">Independent educational platform. Never share passwords, private keys or wallet passphrases with HILEX.</span></footer>
+<script>
+if ("serviceWorker" in navigator) window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js"));
+</script>
+<script src="education-i18n.js?v=sesotho-wallet-full-v1" defer></script>
+</body>
+</html>
